@@ -3,15 +3,13 @@ import {
   OrthographicCamera,
   WebGLRenderer
 } from 'three'
+import { H, W } from './config'
 import { getGrounds } from './ground'
 import { getBall } from './ball'
 import { getRackets } from './racket'
 import { enableControl } from './control'
 
 document.body.style.margin = '0'
-
-const H = 100
-const W = H * window.innerWidth / window.innerHeight
 
 const scene = new Scene()
 const camera = new OrthographicCamera(W / -2, W / 2, H / 2, H / -2, 1, 1000)
@@ -26,11 +24,11 @@ scene.add(ball)
 const rackets = getRackets(W, H)
 rackets.map(d => scene.add(d))
 
-//enableControl(rackets[1])
-
 const renderer = new WebGLRenderer()
 renderer.setSize( window.innerWidth, window.innerHeight )
 document.body.appendChild( renderer.domElement )
+
+enableControl(rackets[1], renderer.domElement)
 
 function animate() {
 	requestAnimationFrame( animate )
