@@ -6,7 +6,7 @@ import {
 import { getGrounds } from './ground'
 import { getBall } from './ball'
 import { getRackets } from './racket'
-import { enableContorl } from './contorl'
+import { enableControl } from './control'
 
 document.body.style.margin = '0'
 
@@ -26,7 +26,7 @@ scene.add(ball)
 const rackets = getRackets(W, H)
 rackets.map(d => scene.add(d))
 
-enableContorl(rackets[1])
+//enableControl(rackets[1])
 
 const renderer = new WebGLRenderer()
 renderer.setSize( window.innerWidth, window.innerHeight )

@@ -1,10 +1,10 @@
 let currentRacket = null
 
-export enableContorl(racket) {
+export function enableContorl(racket) {
   currentRacket = racket
 }
 
-const STATE = { NONE: 0, MOVE: 1, ROTATE: 2}
+const STATE = { NONE: 0, MOVE: 1, ROTATE: 2 }
 
 let state =  STATE.NONE
 
