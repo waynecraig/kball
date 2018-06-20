@@ -18,6 +18,7 @@
   },
   "homepage": "https://github.com/waynecraig/kball#readme",
   "dependencies": {
+    "matter-js": "^0.14.2",
     "oimo": "^1.0.9",
     "three": "^0.93.0"
   },
