@@ -20,6 +20,7 @@
   "dependencies": {
     "matter-js": "^0.14.2",
     "oimo": "^1.0.9",
+    "p2": "^0.7.1",
     "three": "^0.93.0"
   },
   "devDependencies": {
