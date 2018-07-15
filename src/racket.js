@@ -6,7 +6,7 @@ import {
 } from 'three'
 import { H, W } from './config'
 
-const size = [ W / 10, 1, 10 ]
+const size = [ W / 10, 1, 1 ]
 
 const geometry = new BoxBufferGeometry(size[0], size[1], size[2])
 const material = new MeshBasicMaterial( { color: 0x00ffff } )
@@ -19,7 +19,7 @@ export const bodies = meshes.map(d => {
   return world.add({
     type: 'box',
     size,
-    pos: [0, d.position.y, 0],
+    pos: [0, d.position.y, 0.5],
     move: true
   })
 })
